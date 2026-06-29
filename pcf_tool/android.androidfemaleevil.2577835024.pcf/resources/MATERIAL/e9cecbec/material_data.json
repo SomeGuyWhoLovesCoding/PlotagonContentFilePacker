@@ -1,0 +1,28 @@
+{
+  "shaderName": {
+    "cg": "Plotagon/PlotagonMobile-Character-CG",
+    "gles": "Plotagon/PlotagonMobile-Character-GLSL"
+  },
+  "materialName": {
+    "cg": "Material-Character-CG",
+    "gles": "Material-Character-GLSL"
+  },
+  "properties": [
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_MainTex"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_Bump"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_LightRamp"
+    }
+  ],
+  "displayName": "bonus.androidfemale.material"
+}

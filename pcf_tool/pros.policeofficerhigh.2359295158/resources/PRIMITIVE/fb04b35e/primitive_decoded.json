@@ -1,0 +1,9 @@
+{
+  "assemblyType": 3,
+  "fieldType": 1,
+  "arrayItem": false,
+  "value": "{\r\n  \"General\": {\r\n    \"ID\": \"pros.policeofficerhigh\",\r\n    \"Gender\": \"Female\",\r\n    \"DisplayName\": \"Police officer (BUT HIGH ON DRUGS)\"\r\n  },\r\n  \"Voice\": {\r\n    \"voice\": \"jennifer\",\r\n    \"name\": \"AmyHigh\",\r\n    \"properties\": {\r\n      \"pitch\": 50.0,\r\n      \"bass\": 2.0,\r\n      \"treble\": 5.0,\r\n      \"expanded\": false\r\n    }\r\n  }\r\n}",
+  "typeName": "",
+  "fieldName": "Data",
+  "fieldTypeName": "STRING"
+}

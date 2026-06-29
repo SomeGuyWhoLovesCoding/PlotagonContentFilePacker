@@ -1,0 +1,937 @@
+{
+  "resourceType": "ROOT",
+  "resourceTypeValue": 2,
+  "referenceID": "baaf3a45",
+  "children": [
+    {
+      "resourceType": "OBJECT",
+      "resourceTypeValue": 1,
+      "referenceID": "049b3bfe",
+      "children": [
+        {
+          "resourceType": "TRANSFORM",
+          "resourceTypeValue": 128,
+          "referenceID": "96814c3c",
+          "children": [],
+          "name": "cars.yellowcardriving"
+        },
+        {
+          "resourceType": "LIGHTPROBES",
+          "resourceTypeValue": 65536,
+          "referenceID": "9305d9b8",
+          "children": [
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "59c45f6b",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "de730d3c",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "451d4c34",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "ddc47bb6",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "d41d1aed",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "AUDIO",
+              "resourceTypeValue": 1048576,
+              "referenceID": "037eaf14",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "8866dd2c",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "763dc4ec",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "a423aa3f",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "d6ffb6b9",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "4f8f0719",
+          "children": [
+            {
+              "resourceType": "CLASS",
+              "resourceTypeValue": 33554432,
+              "referenceID": "183c7024",
+              "children": [
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "cc7ebfc6",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "84c46569",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "5783e137",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            },
+            {
+              "resourceType": "CLASS",
+              "resourceTypeValue": 33554432,
+              "referenceID": "5ba33920",
+              "children": [
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "29de6ed9",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "ff3a637e",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "749ad507",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "9c90823e",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "c216940f",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "9ffa8de4",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "01ee4eff",
+              "children": [],
+              "name": "Cameras"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "571a8ffb",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "50a6071b",
+                  "children": [],
+                  "name": "Camera"
+                },
+                {
+                  "resourceType": "CAMERA",
+                  "resourceTypeValue": 262144,
+                  "referenceID": "ecdae502",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "Camera"
+            }
+          ],
+          "name": "Cameras"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "3e6d53dd",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "98a8fc56",
+              "children": [],
+              "name": "Colliders"
+            }
+          ],
+          "name": "Colliders"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "e6d07bcf",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "ed09a99b",
+              "children": [],
+              "name": "Lights"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "b101df00",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "c6312260",
+                  "children": [],
+                  "name": "Character"
+                },
+                {
+                  "resourceType": "OBJECT",
+                  "resourceTypeValue": 1,
+                  "referenceID": "b6caa047",
+                  "children": [
+                    {
+                      "resourceType": "TRANSFORM",
+                      "resourceTypeValue": 128,
+                      "referenceID": "42c3f5b9",
+                      "children": [],
+                      "name": "KeyLight"
+                    },
+                    {
+                      "resourceType": "LIGHT",
+                      "resourceTypeValue": 32768,
+                      "referenceID": "1cb96677",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "KeyLight"
+                }
+              ],
+              "name": "Character"
+            }
+          ],
+          "name": "Lights"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "7045ab06",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "ce328ec2",
+              "children": [],
+              "name": "Locations"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "076262a3",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "4799a804",
+                  "children": [],
+                  "name": "Front1"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "cf0b4d26",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "0534b1b0",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "2909ff74",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "5ad7e9ce",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "646f120f",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "c3c0b99f",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "616ee016",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "4457e0f8",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "1411ea7a",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "2a1cfeb9",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "2c685c62",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "ae59b11a",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "acd9fd12",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "1fe041d8",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "24b7bae6",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "Front1"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "66815105",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "a1030086",
+                  "children": [],
+                  "name": "Front2"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "3e2271f4",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "acd52173",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "f29b02d4",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "d626fae3",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "d9cb28f9",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "77a924c6",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "87a04f92",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "057aae7e",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "113ae6c5",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "45e4a5bf",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "01ae3977",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "74081329",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "0bbf46bc",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "7d403be4",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "56ce5d3e",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "Front2"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "6a04ce32",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "c5d41fbc",
+                  "children": [],
+                  "name": "Back"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "bf6b5785",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "e6b336f7",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "b15ff029",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "980b400f",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "8ddb5bce",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "8552b50e",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "b4334919",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "8c4d69ad",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "c571e7af",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "649e97dc",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "2c04fdc2",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "08383b04",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "505da335",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "4870c3fe",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "dcfab082",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "Back"
+            }
+          ],
+          "name": "Locations"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "92d30aae",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "9f659a16",
+              "children": [],
+              "name": "Effects"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "65f78537",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "25479a76",
+                  "children": [],
+                  "name": "cityRight"
+                },
+                {
+                  "resourceType": "OBJECT",
+                  "resourceTypeValue": 1,
+                  "referenceID": "cf7137d0",
+                  "children": [
+                    {
+                      "resourceType": "TRANSFORM",
+                      "resourceTypeValue": 128,
+                      "referenceID": "a6f7b27c",
+                      "children": [],
+                      "name": "movingCityMesh"
+                    },
+                    {
+                      "resourceType": "MESH",
+                      "resourceTypeValue": 32,
+                      "referenceID": "006244e5",
+                      "children": [
+                        {
+                          "resourceType": "MATERIAL",
+                          "resourceTypeValue": 2048,
+                          "referenceID": "3d4e3985",
+                          "children": [
+                            {
+                              "resourceType": "TEXTURE",
+                              "resourceTypeValue": 16384,
+                              "referenceID": "8452857a",
+                              "children": [],
+                              "name": "none"
+                            }
+                          ],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "SCRIPT",
+                      "resourceTypeValue": 16,
+                      "referenceID": "c09961cf",
+                      "children": [
+                        {
+                          "resourceType": "ANIMATIONCLIP",
+                          "resourceTypeValue": 134217728,
+                          "referenceID": "570e1402",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "94e62c66",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "movingCityMesh"
+                }
+              ],
+              "name": "cityRight"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "0f1942d0",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "fa265cf4",
+                  "children": [],
+                  "name": "CatHead_Poes"
+                }
+              ],
+              "name": "CatHead_Poes"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "e776f71a",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "9b5d699e",
+                  "children": [],
+                  "name": "MovingCityLeft"
+                },
+                {
+                  "resourceType": "OBJECT",
+                  "resourceTypeValue": 1,
+                  "referenceID": "cab5f3c3",
+                  "children": [
+                    {
+                      "resourceType": "TRANSFORM",
+                      "resourceTypeValue": 128,
+                      "referenceID": "fd38dd0b",
+                      "children": [],
+                      "name": "movingCityMeshL"
+                    },
+                    {
+                      "resourceType": "MESH",
+                      "resourceTypeValue": 32,
+                      "referenceID": "53832b44",
+                      "children": [
+                        {
+                          "resourceType": "MATERIALPOINTER",
+                          "resourceTypeValue": 4096,
+                          "referenceID": "c3a08a6e",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "SCRIPT",
+                      "resourceTypeValue": 16,
+                      "referenceID": "0a19921f",
+                      "children": [
+                        {
+                          "resourceType": "ANIMATIONCLIP",
+                          "resourceTypeValue": 134217728,
+                          "referenceID": "fab9393d",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "c51a79e6",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "movingCityMeshL"
+                }
+              ],
+              "name": "MovingCityLeft"
+            }
+          ],
+          "name": "Effects"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "1218b173",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "d51a8dc6",
+              "children": [],
+              "name": "Meshes"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "03b8e5d9",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "add8b075",
+                  "children": [],
+                  "name": "combinedobject"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "e0023901",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "e8dfe21e",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "71c63989",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "COLLIDER",
+                  "resourceTypeValue": 524288,
+                  "referenceID": "d7f86dd8",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "combinedobject"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "32295c2c",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "3be6ddba",
+                  "children": [],
+                  "name": "floor"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "3b6ebefa",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "739c5f58",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "floor"
+            }
+          ],
+          "name": "Meshes"
+        }
+      ],
+      "name": "cars.yellowcardriving"
+    }
+  ],
+  "name": "none"
+}

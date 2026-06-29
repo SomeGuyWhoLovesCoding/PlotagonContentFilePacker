@@ -1,0 +1,18 @@
+{
+  "hasTangents": true,
+  "materialID": "8e269ac9",
+  "hasColors": false,
+  "hasNormals": true,
+  "hasUV": true,
+  "vertexCount": 18297,
+  "bounds": {
+    "minZ": -1.10363,
+    "maxX": 3.55169,
+    "maxY": 2.74025,
+    "maxZ": 2.07796,
+    "minX": -3.52294,
+    "minY": -0.0001899
+  },
+  "triangleCount": 15675,
+  "blendShapeCount": 0
+}

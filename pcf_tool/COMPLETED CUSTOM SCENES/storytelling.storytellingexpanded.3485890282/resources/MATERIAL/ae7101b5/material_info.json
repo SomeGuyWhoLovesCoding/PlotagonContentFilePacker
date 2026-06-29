@@ -1,0 +1,73 @@
+{
+  "shaderName": {
+    "cg": "Plotagon/FX/CandleFlame-CG",
+    "gles": "Plotagon/FX/CandleFlame-GLSL"
+  },
+  "materialName": {
+    "cg": "",
+    "gles": ""
+  },
+  "properties": [
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_MainTex"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_Multiplier"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_WaveOffset"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_SineAmplX"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_SineAmplY"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_SineFreqX"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_SineFreqY"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_TimeOn"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_TimeOff"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_NoiseAmount"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_Color"
+    },
+    {
+      "type": 0,
+      "typeName": "Unknown_0",
+      "name": "_Pos"
+    }
+  ],
+  "displayName": "CandleFlameMat"
+}
