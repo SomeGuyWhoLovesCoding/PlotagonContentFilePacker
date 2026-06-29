@@ -1,9 +1,0 @@
-{
-  "channels": 2,
-  "arrayItem": false,
-  "samples": 2646000,
-  "fieldName": "AmbienceAudio",
-  "sampleRate": 44100,
-  "streamed": true,
-  "name": "Ambience_Stages_Talk_show_+23.7_master"
-}
