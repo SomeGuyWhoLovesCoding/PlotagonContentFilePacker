@@ -1,9 +1,0 @@
-{
-  "assemblyType": 3,
-  "fieldType": 1,
-  "arrayItem": false,
-  "value": "{\n  \"General\": {\n    \"ID\": \"android.androidfemaleevil\",\n    \"Gender\": \"Female\",\n    \"DisplayName\": \"Android (female) (EVIL)\"\n  },\n  \"Voice\": {\n    \"voice\": \"jennifer\",\n    \"name\": \"AndroidFemale\",\n    \"properties\": {\n      \"effects\": [\n        \"pitch\",\n        \"100\",\n        \"chorus\",\n        \"0.7 0.7 20 0.8 0.25 2 -t\",\n        \"echo\",\n        \"0.3 0.5 50 0.1\",\n        \"gain\",\n        \"7\"\n      ],\n      \"expanded\": true\n    }\n  }\n}",
-  "typeName": "",
-  "fieldName": "Data",
-  "fieldTypeName": "STRING"
-}
