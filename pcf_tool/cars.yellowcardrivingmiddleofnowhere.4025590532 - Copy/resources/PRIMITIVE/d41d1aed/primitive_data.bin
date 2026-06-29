@@ -1,0 +1,131 @@
+{
+  "General": {
+    "ID": "cars.yellowcardriving",
+    "DisplayName": "Yellow car (driving)",
+    "SceneType": "default"
+  },
+  "Locations": [
+    {
+      "locationID": "Front1",
+      "name": "Driver (right)",
+      "displayName": "behind the wheel",
+      "stance": "SittingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": -0.32699999213218689,
+        "y": 0.0,
+        "z": -0.29800000786781311,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Front2"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Front2",
+      "name": "Passenger (left)",
+      "displayName": "in the passenger seat",
+      "stance": "SittingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": 0.37299713492393494,
+        "y": 0.0,
+        "z": -0.29600000381469727,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Front1"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Back",
+      "name": "Back seat",
+      "displayName": "in the back seat",
+      "stance": "SittingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": 0.0989999994635582,
+        "y": 0.0,
+        "z": -1.2450000047683716,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "None"
+      ],
+      "expanded": false
+    }
+  ],
+  "CameraData": {
+    "Position": {
+      "x": -0.020999999716877937,
+      "y": 1.0870000123977661,
+      "z": 1.2079999446868896,
+      "expanded": false
+    },
+    "Rotation": {
+      "x": 0.0,
+      "y": 180.0,
+      "z": 0.0,
+      "expanded": false
+    },
+    "FOV": 40.0
+  },
+  "Light": {
+    "Ambient": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0,
+      "expanded": false
+    },
+    "KeyLightColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0,
+      "expanded": false
+    },
+    "KeyLightIntensity": 0.25
+  }
+}

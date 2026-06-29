@@ -1,0 +1,1125 @@
+{
+  "resourceType": "ROOT",
+  "resourceTypeValue": 2,
+  "referenceID": "72750aa4",
+  "children": [
+    {
+      "resourceType": "OBJECT",
+      "resourceTypeValue": 1,
+      "referenceID": "9a80d1a9",
+      "children": [
+        {
+          "resourceType": "TRANSFORM",
+          "resourceTypeValue": 128,
+          "referenceID": "0766dfb9",
+          "children": [],
+          "name": "news.sportsstudio"
+        },
+        {
+          "resourceType": "LIGHTPROBES",
+          "resourceTypeValue": 65536,
+          "referenceID": "73ffd529",
+          "children": [
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "2f0dd30d",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "7591d7da",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "8d71babd",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "6ced8fbb",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "7e312917",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "AUDIO",
+              "resourceTypeValue": 1048576,
+              "referenceID": "ec707359",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "c69049ca",
+          "children": [
+            {
+              "resourceType": "COLLECTION",
+              "resourceTypeValue": 8388608,
+              "referenceID": "0f45d639",
+              "children": [
+                {
+                  "resourceType": "GRIDCLUSTER",
+                  "resourceTypeValue": 1073741824,
+                  "referenceID": "6c847718",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "d795cdd6",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "1afc4cf8",
+          "children": [
+            {
+              "resourceType": "CLASS",
+              "resourceTypeValue": 33554432,
+              "referenceID": "c20e8420",
+              "children": [
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "89e2243c",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "936c5e26",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "75c49062",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            },
+            {
+              "resourceType": "CLASS",
+              "resourceTypeValue": 33554432,
+              "referenceID": "4c640330",
+              "children": [
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "8531f5e4",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "e1efd61e",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "9de7d4ea",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "025988b4",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "ab981bf1",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "82ec2c26",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "e6f4275c",
+              "children": [],
+              "name": "Cameras"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "81d1fac1",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "fab7ae58",
+                  "children": [],
+                  "name": "Camera"
+                },
+                {
+                  "resourceType": "CAMERA",
+                  "resourceTypeValue": 262144,
+                  "referenceID": "339582f4",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "Camera"
+            }
+          ],
+          "name": "Cameras"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "cc407fd0",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "ef431adb",
+              "children": [],
+              "name": "Colliders"
+            }
+          ],
+          "name": "Colliders"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "74b57b26",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "0ae62751",
+              "children": [],
+              "name": "Lights"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "7ca07115",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "03f1293e",
+                  "children": [],
+                  "name": "Character"
+                },
+                {
+                  "resourceType": "OBJECT",
+                  "resourceTypeValue": 1,
+                  "referenceID": "f51fe2bf",
+                  "children": [
+                    {
+                      "resourceType": "TRANSFORM",
+                      "resourceTypeValue": 128,
+                      "referenceID": "a70ed7d3",
+                      "children": [],
+                      "name": "KeyLight"
+                    },
+                    {
+                      "resourceType": "LIGHT",
+                      "resourceTypeValue": 32768,
+                      "referenceID": "a3640be9",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "KeyLight"
+                }
+              ],
+              "name": "Character"
+            }
+          ],
+          "name": "Lights"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "5ebbf234",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "7b95549c",
+              "children": [],
+              "name": "Locations"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "98807cde",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "5283da9f",
+                  "children": [],
+                  "name": "desk1"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "4760fc02",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "3a6fbfa5",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "4aaac43f",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "a8b24392",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "e7674bdd",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "c4b4a8cd",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "d1b3f3c8",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "4614449f",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "827d5d34",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "208413ba",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "16f24aa0",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "74c36031",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "b9fdd7ea",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "8aff5468",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "df22d701",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "e16b69b2",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "desk1"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "095aefdc",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "7accb97a",
+                  "children": [],
+                  "name": "desk2"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "dfafb88f",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "c794b89f",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "77702a04",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "3e374426",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "a8759068",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "b509c52f",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "b7691829",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "dbc73dfb",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "666babd7",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "c9ac73c7",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "7978a90b",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "c8bef978",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "975c62bc",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "7b2bc12d",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "21c9494a",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "f51858bf",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "desk2"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "5522c781",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "a62b10bc",
+                  "children": [],
+                  "name": "middle"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "2c2b7174",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "a3ac1bf8",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "1002a33b",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "771b72df",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "ecd7ca2c",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "0c3ec411",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "a0d294bb",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "17e7c1b0",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "90476cba",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "b0f93b61",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "b2a6f7a8",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "654c25a5",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "df6ed876",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "d453b239",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "fb9ad1a4",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "1477dec0",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "middle"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "b5c722c9",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "92fcfb5b",
+                  "children": [],
+                  "name": "camera1"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "959373b0",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "83ae9b36",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "05acfdf9",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "3183b944",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "f887fa7d",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "bc83e102",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "b0411d36",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "696287b7",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "442ae7d0",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "16b2c92b",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "b8701f5b",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "5d19d887",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "f54f0966",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "38c779b6",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "916dae97",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "ae7ee510",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "camera1"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "5bd78bc5",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "71b0f01c",
+                  "children": [],
+                  "name": "camera2"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "d2931884",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "a2dddbeb",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "8ebdf72b",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "0f684b8d",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "82655ad8",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "a1811193",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "9810870b",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "981c2f27",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "e3671cb8",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "00fa21ec",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "CLASS",
+                      "resourceTypeValue": 33554432,
+                      "referenceID": "1f6cb18c",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "1a2c0693",
+                          "children": [],
+                          "name": "none"
+                        },
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "c720e955",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "04bc1827",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "e7cd0f9f",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "c39515dc",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "camera2"
+            }
+          ],
+          "name": "Locations"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "ec24ab33",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "878d5ab1",
+              "children": [],
+              "name": "Effects"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "13a2bcd6",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "0bc4d420",
+                  "children": [],
+                  "name": "p_glass"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "bda6f8ee",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "bd90a639",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "95c0c814",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "ANIMATOR",
+                  "resourceTypeValue": 256,
+                  "referenceID": "a34b0340",
+                  "children": [
+                    {
+                      "resourceType": "AVATARREFERENCE",
+                      "resourceTypeValue": 512,
+                      "referenceID": "5889d84c",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "p_glass"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "a792d026",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "63d57c04",
+                  "children": [],
+                  "name": "TargetToLookAt"
+                }
+              ],
+              "name": "TargetToLookAt"
+            }
+          ],
+          "name": "Effects"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "438566e3",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "6969f7ba",
+              "children": [],
+              "name": "Meshes"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "f6eb9289",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "82658a90",
+                  "children": [],
+                  "name": "combinedobject"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "8ee7f6f7",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "971ca6f5",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "da6f8f2d",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "combinedobject"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "d45fff4b",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "6ebcef4b",
+                  "children": [],
+                  "name": "floor"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "25d0cebc",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "8e53f758",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "floor"
+            }
+          ],
+          "name": "Meshes"
+        }
+      ],
+      "name": "news.sportsstudio"
+    }
+  ],
+  "name": "none"
+}

@@ -1,0 +1,9 @@
+{
+  "assemblyType": 3,
+  "fieldType": 1,
+  "arrayItem": false,
+  "value": "Idle04",
+  "typeName": "",
+  "fieldName": "extraAnimationID",
+  "fieldTypeName": "STRING"
+}

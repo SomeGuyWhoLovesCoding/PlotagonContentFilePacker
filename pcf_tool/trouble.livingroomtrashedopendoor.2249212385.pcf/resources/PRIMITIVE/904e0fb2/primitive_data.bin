@@ -1,0 +1,169 @@
+{
+  "General": {
+    "ID": "trouble.livingroomtrashed",
+    "DisplayName": "Livingroom trashed",
+    "SceneType": "default"
+  },
+  "Locations": [
+    {
+      "locationID": "Bookshelfs1",
+      "name": "Bookshelves (left)",
+      "displayName": "to the left by the bookshelves",
+      "stance": "StandingNormal",
+      "Position": {
+        "x": 1.6663937568664551,
+        "y": 2.3283064365386963E-09,
+        "z": 1.7731485366821289,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 73.2161865234375,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Bookshelfs2"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Bookshelfs2",
+      "name": "Bookshelves (right)",
+      "displayName": "to the right by the bookshelves",
+      "stance": "StandingNormal",
+      "Position": {
+        "x": 2.56679368019104,
+        "y": 2.3283064365386963E-09,
+        "z": 2.2082116603851318,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 168.537109375,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Bookshelfs1"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Door",
+      "name": "Door",
+      "displayName": "by the door",
+      "stance": "StandingNormal",
+      "Position": {
+        "x": 3.2400000095367432,
+        "y": 0.0,
+        "z": 5.6630001068115234,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 191.05392456054688,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [],
+      "expanded": false
+    },
+    {
+      "locationID": "Stool",
+      "name": "Ottoman",
+      "displayName": "sitting on the ottoman",
+      "stance": "SittingNormal",
+      "Position": {
+        "x": 4.8619999885559082,
+        "y": 0.0,
+        "z": 2.6559998989105225,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 291.17822265625,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [],
+      "expanded": false
+    },
+    {
+      "locationID": "Sofa1",
+      "name": "Sofa (left)",
+      "displayName": "sitting to the left",
+      "stance": "SittingNormal",
+      "Position": {
+        "x": 2.6740000247955322,
+        "y": 0.0,
+        "z": 3.7129998207092285,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 100.11567687988281,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Sofa2"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Sofa2",
+      "name": "Sofa (right)",
+      "displayName": "sitting to the right",
+      "stance": "SittingNormal",
+      "Position": {
+        "x": 2.797987699508667,
+        "y": 0.0,
+        "z": 4.4019317626953125,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 100.11567687988281,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Sofa1"
+      ],
+      "expanded": false
+    }
+  ],
+  "CameraData": {
+    "Position": {
+      "x": 5.5545620918273926,
+      "y": 1.4398725032806396,
+      "z": 0.45220813155174255,
+      "expanded": false
+    },
+    "Rotation": {
+      "x": 9.1823663711547852,
+      "y": 312.58416748046875,
+      "z": 359.2730712890625,
+      "expanded": false
+    },
+    "FOV": 55.0
+  },
+  "Light": {
+    "Ambient": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0,
+      "expanded": false
+    },
+    "KeyLightColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0,
+      "expanded": false
+    },
+    "KeyLightIntensity": 0.20000000298023224
+  }
+}

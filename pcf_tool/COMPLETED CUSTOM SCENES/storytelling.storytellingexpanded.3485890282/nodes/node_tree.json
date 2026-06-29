@@ -1,0 +1,617 @@
+{
+  "resourceType": "ROOT",
+  "resourceTypeValue": 2,
+  "referenceID": "0e2bf32a",
+  "children": [
+    {
+      "resourceType": "OBJECT",
+      "resourceTypeValue": 1,
+      "referenceID": "1e577b85",
+      "children": [
+        {
+          "resourceType": "TRANSFORM",
+          "resourceTypeValue": 128,
+          "referenceID": "29bd28a2",
+          "children": [],
+          "name": "storytelling.storytelling"
+        },
+        {
+          "resourceType": "LIGHTPROBES",
+          "resourceTypeValue": 65536,
+          "referenceID": "1e7bfbca",
+          "children": [
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "949a6a80",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "f029ebea",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "INTERNALBUNDLE",
+              "resourceTypeValue": 131072,
+              "referenceID": "f1cc4d7f",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "c198db18",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "85f0fbf7",
+              "children": [],
+              "name": "none"
+            },
+            {
+              "resourceType": "AUDIO",
+              "resourceTypeValue": 1048576,
+              "referenceID": "9b350fe2",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "61cc35a0",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "73f86e15",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "fb55c1d9",
+          "children": [
+            {
+              "resourceType": "PRIMITIVE",
+              "resourceTypeValue": 4194304,
+              "referenceID": "92b5cf95",
+              "children": [],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "SCRIPT",
+          "resourceTypeValue": 16,
+          "referenceID": "ac8e652d",
+          "children": [
+            {
+              "resourceType": "CLASS",
+              "resourceTypeValue": 33554432,
+              "referenceID": "da263399",
+              "children": [
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "71d69dcc",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "61463bc9",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "c8e51578",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            },
+            {
+              "resourceType": "CLASS",
+              "resourceTypeValue": 33554432,
+              "referenceID": "d92485db",
+              "children": [
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "d437e91d",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "ef64a60b",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "a8cb7bda",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "7c85178f",
+                  "children": [],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "PRIMITIVE",
+                  "resourceTypeValue": 4194304,
+                  "referenceID": "a5492ae0",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "none"
+            }
+          ],
+          "name": "none"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "c337eb21",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "b65cad9a",
+              "children": [],
+              "name": "Cameras"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "80421c04",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "4beb089a",
+                  "children": [],
+                  "name": "Camera"
+                },
+                {
+                  "resourceType": "CAMERA",
+                  "resourceTypeValue": 262144,
+                  "referenceID": "c53b8206",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "Camera"
+            }
+          ],
+          "name": "Cameras"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "39e37c20",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "4b42ed40",
+              "children": [],
+              "name": "Colliders"
+            }
+          ],
+          "name": "Colliders"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "e68df8de",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "0e4ca57d",
+              "children": [],
+              "name": "Lights"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "0235e9b0",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "1440c934",
+                  "children": [],
+                  "name": "Character"
+                },
+                {
+                  "resourceType": "OBJECT",
+                  "resourceTypeValue": 1,
+                  "referenceID": "f984d43e",
+                  "children": [
+                    {
+                      "resourceType": "TRANSFORM",
+                      "resourceTypeValue": 128,
+                      "referenceID": "57160872",
+                      "children": [],
+                      "name": "KeyLight"
+                    },
+                    {
+                      "resourceType": "LIGHT",
+                      "resourceTypeValue": 32768,
+                      "referenceID": "1d789a91",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "KeyLight"
+                }
+              ],
+              "name": "Character"
+            }
+          ],
+          "name": "Lights"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "1db305cb",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "b7ed4c68",
+              "children": [],
+              "name": "Locations"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "75d8fb6a",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "d5add1c1",
+                  "children": [],
+                  "name": "reader"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "4a8232d3",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "c93950f7",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "a4b68caa",
+                  "children": [
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "4e1d6436",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "7957d2a0",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "9a9703eb",
+                      "children": [],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "COLLECTION",
+                      "resourceTypeValue": 8388608,
+                      "referenceID": "ab6030c6",
+                      "children": [
+                        {
+                          "resourceType": "PRIMITIVE",
+                          "resourceTypeValue": 4194304,
+                          "referenceID": "904433df",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    },
+                    {
+                      "resourceType": "PRIMITIVE",
+                      "resourceTypeValue": 4194304,
+                      "referenceID": "d846f673",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "reader"
+            }
+          ],
+          "name": "Locations"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "0163292c",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "90b0a440",
+              "children": [],
+              "name": "Effects"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "f01fb0f3",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "38b01d70",
+                  "children": [],
+                  "name": "candleFlame0Mesh"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "cdad9a08",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "ae7101b5",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "809212f0",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "a86f86a9",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "candleFlame0Mesh"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "b8699279",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "50cdc458",
+                  "children": [],
+                  "name": "candleFlame3Mesh"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "e9789dc8",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "d46dfbff",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "05a5b0ff",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "89c10d03",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "candleFlame3Mesh"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "d0298aaf",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "501c78ea",
+                  "children": [],
+                  "name": "MultipleCandleFlamesFXMesh"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "defc37f1",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "3968c76f",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "08cbfafa",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                },
+                {
+                  "resourceType": "SCRIPT",
+                  "resourceTypeValue": 16,
+                  "referenceID": "58cdadd3",
+                  "children": [],
+                  "name": "none"
+                }
+              ],
+              "name": "MultipleCandleFlamesFXMesh"
+            }
+          ],
+          "name": "Effects"
+        },
+        {
+          "resourceType": "OBJECT",
+          "resourceTypeValue": 1,
+          "referenceID": "d217958b",
+          "children": [
+            {
+              "resourceType": "TRANSFORM",
+              "resourceTypeValue": 128,
+              "referenceID": "aced2bd8",
+              "children": [],
+              "name": "Meshes"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "9528f066",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "cb9fbff0",
+                  "children": [],
+                  "name": "floor"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "8ca81888",
+                  "children": [
+                    {
+                      "resourceType": "MATERIAL",
+                      "resourceTypeValue": 2048,
+                      "referenceID": "8e269ac9",
+                      "children": [
+                        {
+                          "resourceType": "TEXTURE",
+                          "resourceTypeValue": 16384,
+                          "referenceID": "3f0b882b",
+                          "children": [],
+                          "name": "none"
+                        }
+                      ],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "floor"
+            },
+            {
+              "resourceType": "OBJECT",
+              "resourceTypeValue": 1,
+              "referenceID": "08671f1f",
+              "children": [
+                {
+                  "resourceType": "TRANSFORM",
+                  "resourceTypeValue": 128,
+                  "referenceID": "0838f267",
+                  "children": [],
+                  "name": "combinedobject"
+                },
+                {
+                  "resourceType": "MESH",
+                  "resourceTypeValue": 32,
+                  "referenceID": "f277396a",
+                  "children": [
+                    {
+                      "resourceType": "MATERIALPOINTER",
+                      "resourceTypeValue": 4096,
+                      "referenceID": "fb1f669c",
+                      "children": [],
+                      "name": "none"
+                    }
+                  ],
+                  "name": "none"
+                }
+              ],
+              "name": "combinedobject"
+            }
+          ],
+          "name": "Meshes"
+        }
+      ],
+      "name": "storytelling.storytelling"
+    }
+  ],
+  "name": "none"
+}

@@ -1,0 +1,9 @@
+{
+  "channels": 1,
+  "arrayItem": false,
+  "samples": 378748,
+  "fieldName": "AmbienceAudio",
+  "sampleRate": 44100,
+  "streamed": true,
+  "name": "car"
+}

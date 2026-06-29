@@ -1,0 +1,191 @@
+{
+  "General": {
+    "ID": "cars.redcarstopped",
+    "DisplayName": "Red car stopped",
+    "SceneType": "default"
+  },
+  "Locations": [
+    {
+      "locationID": "Front1",
+      "name": "Driver (right)",
+      "displayName": "behind the wheel",
+      "stance": "SittingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": -0.32699999213218689,
+        "y": 0.0,
+        "z": -0.38170000910758972,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Front2"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Front2",
+      "name": "Passenger (left)",
+      "displayName": "in the passenger seat",
+      "stance": "SittingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": 0.37299713492393494,
+        "y": 0.0,
+        "z": -0.37970000505447388,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "Front1"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "Back",
+      "name": "Back seat",
+      "displayName": "in the back seat",
+      "stance": "SittingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": 0.25,
+        "y": 0.0,
+        "z": -1.4450000524520874,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "None"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "outsidelf1",
+      "name": "Outside (right)",
+      "displayName": "outside car to the right",
+      "stance": "StandingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": -2.0897140502929688,
+        "y": 0.0,
+        "z": -1.9638071060180664,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 7.6005892753601074,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "outsidelf2"
+      ],
+      "expanded": false
+    },
+    {
+      "locationID": "outsidelf2",
+      "name": "Outside (left)",
+      "displayName": "outside car to the left",
+      "stance": "StandingNormal",
+      "type": 0,
+      "extraAnimationID": "",
+      "walkingLocation": false,
+      "ExtraBias": {
+        "x": 0.0,
+        "y": 0.0,
+        "expanded": false
+      },
+      "Position": {
+        "x": -1.5684645175933838,
+        "y": 0.0,
+        "z": -1.1104028224945068,
+        "expanded": false
+      },
+      "Rotation": {
+        "x": 0.0,
+        "y": 8.6626558303833,
+        "z": 0.0,
+        "expanded": false
+      },
+      "adjacents": [
+        "outsidelf1"
+      ],
+      "expanded": false
+    }
+  ],
+  "CameraData": {
+    "Position": {
+      "x": -1.0299999713897705,
+      "y": 1.2330000400543213,
+      "z": 3.1919999122619629,
+      "expanded": false
+    },
+    "Rotation": {
+      "x": 3.883368968963623,
+      "y": 166.08735656738281,
+      "z": 0.50836992263793945,
+      "expanded": false
+    },
+    "FOV": 40.0
+  },
+  "Light": {
+    "Ambient": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0,
+      "expanded": false
+    },
+    "KeyLightColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0,
+      "expanded": false
+    },
+    "KeyLightIntensity": 0.20000000298023224
+  }
+}
