@@ -386,9 +386,10 @@ class Unpacker {
         // data for the scene. The three platform variants encode the same
         // probe data compiled for different GPU/compression targets.
         //
-        // Extraction: in addition to bundle_data.bin we write a platform-named
-        // .unity3d file so the bundle can be opened directly in AssetStudio,
-        // uTinyRipper, or dragged into a Unity project.
+        // Extraction:
+        //   - bundle_data.bin + bundle_<platform>.unity3d  (raw, for lossless roundtrip)
+        //   - bundle_info.json  (UnityFS header, block layout, compression details)
+        //   - inner_serialized.bin  (decompressed inner Unity SerializedFile)
         } else if (rt == RT.INTERNALBUNDLE) {
             if (a.meta != null) writeJsonMeta(assetDir, "bundle_meta.json", a.meta);
             if (a.data != null && a.data.length > 0) {
@@ -401,6 +402,8 @@ class Unpacker {
                     if (p != null) platform = Std.string(p);
                 } catch (_) {}
                 FS.writeBytes(FS.join(assetDir, 'bundle_$platform.unity3d'), a.data);
+                // Parse the UnityFS bundle and extract inner content
+                UnityBundleParser.parse(a.data, assetDir);
             }
 
         // ── ANIMATOR ───────────────────────────────────────────────────────
