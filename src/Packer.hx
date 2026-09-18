@@ -30,26 +30,47 @@ class Packer {
         }
 
         // ── Resource blocks ─────────────────────────────────────────────────
+        // Collect (typeDir, blockOrder) pairs, then sort by blockOrder so
+        // RESOURCE blocks are re-emitted in their original file-insertion order
+        // (which is what Plotagon's writer does). Without this sort, FS.subdirs
+        // would emit them alphabetically and the INDEX entry order would differ
+        // from the original — preventing byte-identical round-trips.
         var resPayloads : Array<{ rt: Int, payload: Bytes }> = [];
         var resRoot = FS.join(inDir, "resources");
         if (FS.exists(resRoot)) {
+            var ordered : Array<{ dir: String, order: Int }> = [];
             for (typeName in FS.subdirs(resRoot)) {
                 var typeDir = FS.join(resRoot, typeName);
                 var biPath  = FS.join(typeDir, "block_info.json");
                 if (!FS.exists(biPath)) continue;
-                var bi  = FS.readJson(biPath);
+                var bi = FS.readJson(biPath);
+                // blockOrder is written by Unpacker.hx; if absent (older unpack),
+                // fall back to 0 so the block still gets packed.
+                var ord = Reflect.hasField(bi, "blockOrder")
+                          ? Reflect.field(bi, "blockOrder")
+                          : 0;
+                ordered.push({ dir: typeDir, order: ord });
+            }
+            ordered.sort(function(a, b) return a.order - b.order);
+            for (entry in ordered) {
+                var bi = FS.readJson(FS.join(entry.dir, "block_info.json"));
                 var rt  = RT.fromName(sF(bi, "resourceType"));
-                var payload = serializeResPayload(typeDir, rt);
+                var payload = serializeResPayload(entry.dir, rt);
                 resPayloads.push({ rt: rt, payload: payload });
             }
         }
 
         // ── Compute wrapped block sizes → INDEX offsets ──────────────────────
+        // Plotagon's PCF writer iterates its blockData dictionary in insertion
+        // order (resources first, NODE block last), so the INDEX entries follow
+        // the same order: RESOURCE entries first, NODE entry last.
+        // The Haxe unpacker preserves this order in `resBlocks`, so we mirror
+        // it here for byte-identical round-trips.
         var toWrap : Array<{ bt: Int, rt: Int, payload: Bytes }> = [];
-        if (nodePayload != null)
-            toWrap.push({ bt: PCFBlockTypes.NODE, rt: RT.NODE, payload: nodePayload });
         for (rp in resPayloads)
             toWrap.push({ bt: PCFBlockTypes.RESOURCE, rt: rp.rt, payload: rp.payload });
+        if (nodePayload != null)
+            toWrap.push({ bt: PCFBlockTypes.NODE, rt: RT.NODE, payload: nodePayload });
 
         // wrapped size = 4(chunkLen) + 4(blockType) + [4(resType) if RESOURCE] + payload
         var wrappedSizes : Array<Int> = [];
@@ -300,8 +321,41 @@ class Packer {
         if (rt == RT.LIGHTPROBES)
             return tryRead(d, "data.bin");
 
-        if (rt == RT.INTERNALBUNDLE)
+        if (rt == RT.INTERNALBUNDLE) {
+            // For INTERNALBUNDLE, the default behavior is to use the original
+            // bundle_data.bin (byte-identical round-trip when no edits).
+            //
+            // To apply edits to the Unity SerializedFile objects:
+            //   1. Edit the per-object .json files in serialized_file/objects/
+            //   2. Delete bundle_data.bin (signals "re-serialize from JSON")
+            //   3. Run the packer
+            //
+            // The Packer detects the missing bundle_data.bin and re-serializes:
+            //   - Re-encodes each object's bytes from the .json "decoded" field
+            //     using the TypeTree writer (port of UnityPy's write_value)
+            //   - Re-assembles the SerializedFile (header + metadata + data)
+            //   - Re-packs the UnityFS bundle (LZ4HC compress + wrap)
+            //   - Writes the new bundle_data.bin
+            //
+            // Requires: Python 3 + `pip install lz4` (for LZ4HC compression)
+            var bundleDataPath = FS.join(d, "bundle_data.bin");
+            if (!FS.exists(bundleDataPath) && FS.exists(FS.join(d, "serialized_file"))) {
+                Sys.println('  [INTERNALBUNDLE] bundle_data.bin missing — re-serializing from per-object JSON...');
+                try {
+                    var newBundle = reSerializeBundle(d);
+                    if (newBundle != null) {
+                        FS.writeBytes(bundleDataPath, newBundle);
+                        Sys.println('  [INTERNALBUNDLE] Re-serialized bundle_data.bin (${newBundle.length} bytes)');
+                    } else {
+                        Sys.println('  [INTERNALBUNDLE] Re-serialization returned null — creating empty bundle');
+                    }
+                } catch (e : Dynamic) {
+                    Sys.println('  [INTERNALBUNDLE] Re-serialization failed: $e');
+                    throw 'Cannot pack INTERNALBUNDLE: bundle_data.bin missing and re-serialization failed: $e';
+                }
+            }
             return tryRead(d, "bundle_data.bin");
+        }
 
         if (rt == RT.AVATARREFERENCE)
             return tryRead(d, "data.bin");
@@ -1125,6 +1179,112 @@ class Packer {
     }
 
     static function die(msg : String) : Void { Sys.println('[ERROR] $msg'); Sys.exit(1); }
+
+    /**
+     * Re-serialize a Unity SerializedFile from the per-object JSON files in
+     * `serialized_file/objects/`, then re-pack it into a UnityFS AssetBundle
+     * (LZ4HC-compressed). Returns the new bundle bytes that should replace
+     * `bundle_data.bin`.
+     *
+     * For each object:
+     *   - If the .json has a "decoded" field (TypeTree was decoded during
+     *     unpack), re-encode using the TypeTree writer (calls
+     *     SerializedFileParser.save()).
+     *   - Otherwise, use the original .bin bytes (preserved byte-for-byte
+     *     for objects without a TypeTree, like AssetBundle #4).
+     *
+     * The metadata (header, types table, TypeTrees, scripts, externals) is
+     * preserved byte-for-byte by reading typeTreeBytes from
+     * `types/<idx>_typetree.bin` (saved during unpack).
+     */
+    static function reSerializeBundle(d : String) : Null<Bytes> {
+        var sfDir = FS.join(d, "serialized_file");
+        var infoPath = FS.join(sfDir, "serialized_file_info.json");
+        var innerPath = FS.join(d, "inner_serialized.bin");
+        if (!FS.exists(infoPath) || !FS.exists(innerPath)) {
+            Sys.println('  [reSerializeBundle] Missing serialized_file_info.json or inner_serialized.bin');
+            return null;
+        }
+
+        var info = FS.readJson(infoPath);
+        var header : Dynamic = Reflect.field(info, "header");
+        var bigEndian = Reflect.field(header, "endianness") != 0;
+        var dataOffset : Int = Reflect.field(header, "dataOffset");
+        var origInner : Bytes = FS.readBytes(innerPath);
+
+        // Load parsed TypeTrees + raw TypeTree bytes per type
+        var typesInfo : Array<Dynamic> = Reflect.field(info, "types");
+        var typeTrees : Array<{root : SerializedFileParser.TypeTreeNode, rawBytes : Bytes, ttParsed : TypeTreeData}> = [];
+        for (t in typesInfo) {
+            var nodesFile : String = Reflect.field(t, "typeTreeNodesFile");
+            var rawFile : String = Reflect.field(t, "typeTreeBytesFile");
+            var root : SerializedFileParser.TypeTreeNode = null;
+            var rawBytes : Bytes = null;
+            if (nodesFile != null) {
+                var nodesPath = FS.join(sfDir, nodesFile);
+                if (FS.exists(nodesPath)) {
+                    var ttJson = FS.readJson(nodesPath);
+                    var nodesArr : Array<Dynamic> = Reflect.field(ttJson, "nodes");
+                    root = SerializedFileParser.typeTreeNodesFromJson(nodesArr);
+                }
+            }
+            if (rawFile != null) {
+                var rawPath = FS.join(sfDir, rawFile);
+                if (FS.exists(rawPath)) rawBytes = FS.readBytes(rawPath);
+            }
+            if (root != null && rawBytes != null) {
+                Reflect.setField(t, "typeTreeBytes", rawBytes);
+                typeTrees.push({root: root, rawBytes: rawBytes, ttParsed: null});
+            } else {
+                typeTrees.push({root: null, rawBytes: null, ttParsed: null});
+            }
+        }
+
+        // Check if any per-object .json was edited since unpack.
+        // Since we're called because bundle_data.bin was deleted (user signal),
+        // always re-serialize.
+        var objectsDir = FS.join(sfDir, "objects");
+        Sys.println('  [reSerializeBundle] Re-serializing from per-object JSON...');
+
+        // Now save() will use the (possibly re-encoded) .bin files + preserved metadata
+        var newInner = SerializedFileParser.save(info, objectsDir, bigEndian);
+        if (newInner == null) {
+            Sys.println('  [reSerializeBundle] SerializedFileParser.save() returned null');
+            return null;
+        }
+
+        // Compare the re-serialized inner SerializedFile to the original.
+        // If identical → no edits were made → return null to signal "use
+        // original bundle_data.bin" (byte-identical round-trip).
+        // If different → re-pack the UnityFS bundle and return new bytes.
+        var origInnerPath = FS.join(d, "inner_serialized.bin");
+        if (FS.exists(origInnerPath)) {
+            var origInner = FS.readBytes(origInnerPath);
+            if (newInner.length == origInner.length) {
+                var identical = true;
+                for (i in 0...newInner.length) {
+                    if (newInner.get(i) != origInner.get(i)) { identical = false; break; }
+                }
+                if (identical) {
+                    Sys.println('  [reSerializeBundle] Inner SerializedFile unchanged — using original bundle_data.bin');
+                    return null;  // signal: use original
+                }
+            }
+        }
+        Sys.println('  [reSerializeBundle] Inner SerializedFile changed — re-packing UnityFS bundle');
+
+        // Re-pack the new inner SerializedFile into a UnityFS bundle
+        var bundleMetaPath = FS.join(d, "bundle_info.json");
+        var bundleMeta : Dynamic = null;
+        if (FS.exists(bundleMetaPath)) {
+            bundleMeta = FS.readJson(bundleMetaPath);
+        }
+        var origBundle = FS.readBytes(FS.join(d, "bundle_data.bin"));
+        var newBundle = UnityBundleParser.packBundle(newInner, bundleMeta, origBundle);
+        return newBundle;
+    }
 }
+
+typedef TypeTreeData = { }  // placeholder
 
 typedef NodeRec2 = { resType: Int, referenceID: Int, name: String, children: Array<NodeRec2> }

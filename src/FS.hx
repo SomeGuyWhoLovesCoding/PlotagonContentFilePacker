@@ -74,8 +74,25 @@ class FS {
         return StringTools.hex(hi, 4).toLowerCase() + StringTools.hex(lo, 4).toLowerCase();
     }
 
-    /** 8-char hex string → Int (same bit pattern) */
+    /** 8-char hex string → Int (same bit pattern).
+        Parses as two 16-bit halves to avoid strtol overflow on platforms
+        where `long` is 32-bit (e.g., 64-bit Windows LLP64 model). On those
+        platforms, Std.parseInt("0x894bfbb9") calls strtol which overflows
+        and returns LONG_MAX (2147483647) for ANY value > 0x7FFFFFFF,
+        clamping all high-bit-set resourceIDs to the same value → duplicate
+        key errors in Plotagon's C# ResourceBlock.SetBytes dictionary. */
     public static function unhex8(s : String) : Int {
-        return Std.parseInt("0x" + s);
+        if (s == null || s.length == 0) return 0;
+        if (s.length != 8) {
+            var v = Std.parseInt("0x" + s);
+            return v != null ? v : 0;
+        }
+        // Parse as two independent 16-bit halves — each fits in Int without
+        // overflow on any platform. Then combine with (hi << 16) | lo.
+        var hi = Std.parseInt("0x" + s.substr(0, 4));
+        var lo = Std.parseInt("0x" + s.substr(4, 4));
+        if (hi == null) hi = 0;
+        if (lo == null) lo = 0;
+        return (hi << 16) | lo;
     }
 }

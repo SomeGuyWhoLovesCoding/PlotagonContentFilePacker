@@ -60,7 +60,11 @@ class Unpacker {
         Sys.println('  Writing ${resBlocks.length} resource block(s)...');
         var resRoot = FS.join(outDir, "resources");
         FS.mkdir(resRoot);
-        for (rb in resBlocks) writeResBlock(resRoot, rb);
+        // Pass the file-order index so Packer.hx can sort RESOURCE blocks
+        // back into the original insertion order — needed for byte-identical
+        // round-trips (Plotagon writes RESOURCE blocks in dictionary insertion
+        // order, which FS.subdirs() wouldn't otherwise preserve).
+        for (i in 0...resBlocks.length) writeResBlock(resRoot, resBlocks[i], i);
 
         Sys.println('Done.');
     }
@@ -133,7 +137,7 @@ class Unpacker {
 
     // ── Write resource block ───────────────────────────────────────────────────
 
-    static function writeResBlock(resRoot : String, rb : ResBlock) : Void {
+    static function writeResBlock(resRoot : String, rb : ResBlock, blockOrder : Int) : Void {
         var typeName = RT.toName(rb.resTypeRaw);
         var typeDir  = FS.join(resRoot, typeName);
         FS.mkdir(typeDir);
@@ -141,6 +145,12 @@ class Unpacker {
         Reflect.setField(bi, "resourceType",      typeName);
         Reflect.setField(bi, "resourceTypeValue", rb.resTypeRaw);
         Reflect.setField(bi, "assetCount",        rb.assets.length);
+        // blockOrder = the file-position index of this RESOURCE block in
+        // the original PCF (0-based). Packer.hx sorts RESOURCE blocks by
+        // this field before serializing, so the round-tripped file has the
+        // same INDEX entry order as the original — enabling byte-identical
+        // round-trips.
+        Reflect.setField(bi, "blockOrder",         blockOrder);
         FS.writeJson(FS.join(typeDir, "block_info.json"), bi);
         for (i in 0...rb.assets.length)
             writeAsset(typeDir, rb.assets[i], rb.resTypeRaw, i);
@@ -870,22 +880,22 @@ class Unpacker {
     static function decodeMaterial(b : Bytes) : Null<Dynamic> {
         var fields = scanProtobuf(b);
 
-        var displayName = fields.get(1) != null ? fields.get(1).sv : "";
+        var displayName = bStr(fields.get(1) != null ? fields.get(1).bv : null);
 
-        // field2 = MaterialName submsg
+        // field2 = MaterialName submsg — use .bv directly, no String round-trip
         var matName : Dynamic = {};
-        if (fields.get(2) != null) {
-            var sub = scanProtobuf(Bytes.ofString(fields.get(2).sv));
-            Reflect.setField(matName, "cg",   sub.get(1) != null ? sub.get(1).sv : "");
-            Reflect.setField(matName, "gles", sub.get(2) != null ? sub.get(2).sv : "");
+        if (fields.get(2) != null && fields.get(2).bv != null) {
+            var sub = scanProtobuf(fields.get(2).bv);
+            Reflect.setField(matName, "cg",   bStr(sub.get(1) != null ? sub.get(1).bv : null));
+            Reflect.setField(matName, "gles", bStr(sub.get(2) != null ? sub.get(2).bv : null));
         }
 
         // field3 = ShaderName submsg
         var shaderName : Dynamic = {};
-        if (fields.get(3) != null) {
-            var sub = scanProtobuf(Bytes.ofString(fields.get(3).sv));
-            Reflect.setField(shaderName, "cg",   sub.get(1) != null ? sub.get(1).sv : "");
-            Reflect.setField(shaderName, "gles", sub.get(2) != null ? sub.get(2).sv : "");
+        if (fields.get(3) != null && fields.get(3).bv != null) {
+            var sub = scanProtobuf(fields.get(3).bv);
+            Reflect.setField(shaderName, "cg",   bStr(sub.get(1) != null ? sub.get(1).bv : null));
+            Reflect.setField(shaderName, "gles", bStr(sub.get(2) != null ? sub.get(2).bv : null));
         }
 
         // field4 = repeated property entries — scanProtobuf only returns last value per field
@@ -894,8 +904,8 @@ class Unpacker {
         var allField4 = scanProtobufMulti(b, 4);
         for (propBytes in allField4) {
             var propFields = scanProtobuf(propBytes);
-            var propName = propFields.get(1) != null ? propFields.get(1).sv : "";
-            var propValBytes = propFields.get(2) != null ? Bytes.ofString(propFields.get(2).sv) : null;
+            var propName = bStr(propFields.get(1) != null ? propFields.get(1).bv : null);
+            var propValBytes = propFields.get(2) != null ? propFields.get(2).bv : null;
 
             var entry : Dynamic = {};
             Reflect.setField(entry, "name", propName);
@@ -919,7 +929,7 @@ class Unpacker {
 
             if (propType == 4) {
                 // Texture: field400 submsg → field1 = ReferenceID varint
-                var texPayload = propVal.get(400) != null ? Bytes.ofString(propVal.get(400).sv) : null;
+                var texPayload = propVal.get(400) != null ? propVal.get(400).bv : null;
                 if (texPayload != null) {
                     var texFields = scanProtobuf(texPayload);
                     var refID = texFields.get(1) != null ? texFields.get(1).iv : 0;
@@ -927,14 +937,14 @@ class Unpacker {
                 }
             } else if (propType == 1) {
                 // Float: field300 submsg → field1 = Val (Fixed32)
-                var fPayload = propVal.get(300) != null ? Bytes.ofString(propVal.get(300).sv) : null;
+                var fPayload = propVal.get(300) != null ? propVal.get(300).bv : null;
                 if (fPayload != null) {
                     var pv = scanProtobufF32(fPayload);
                     Reflect.setField(entry, "value", pv.get(1) != null ? pv.get(1) : 0.0);
                 }
             } else if (propType == 3) {
                 // Color: field200 submsg → f1=R, f2=G, f3=B, f4=A (Fixed32)
-                var payload = propVal.get(200) != null ? Bytes.ofString(propVal.get(200).sv) : null;
+                var payload = propVal.get(200) != null ? propVal.get(200).bv : null;
                 if (payload != null) {
                     var pv = scanProtobufF32(payload);
                     var c : Dynamic = {};
@@ -946,7 +956,7 @@ class Unpacker {
                 }
             } else if (propType == 2) {
                 // Vector: field100 submsg → f1=X, f2=Y, f3=Z, f4=W (Fixed32)
-                var payload = propVal.get(100) != null ? Bytes.ofString(propVal.get(100).sv) : null;
+                var payload = propVal.get(100) != null ? propVal.get(100).bv : null;
                 if (payload != null) {
                     var pv = scanProtobufF32(payload);
                     var v2 : Dynamic = {};
@@ -1082,10 +1092,10 @@ class Unpacker {
     static function decodeSerializedFieldData(b : Bytes) : Dynamic {
         var fields = scanProtobuf(b);
         var fieldType    = fields.get(1) != null ? fields.get(1).iv : 0;
-        var typeName     = fields.get(2) != null ? fields.get(2).sv : "";
+        var typeName     = bStr(fields.get(2) != null ? fields.get(2).bv : null);
         var assemblyType = fields.get(3) != null ? fields.get(3).iv : 0;
         var arrayItem    = fields.get(4) != null ? (fields.get(4).iv != 0) : false;
-        var fieldName    = fields.get(5) != null ? fields.get(5).sv : "";
+        var fieldName    = bStr(fields.get(5) != null ? fields.get(5).bv : null);
         var o : Dynamic = {};
         Reflect.setField(o, "fieldType",     fieldType);
         Reflect.setField(o, "fieldTypeName", switch(fieldType){case 1:"STRING";case 2:"INT";case 3:"UINT";case 4:"FLOAT";case 5:"DOUBLE";case 6:"BOOLEAN";case 7:"BYTEBUFFER";default:"UNKNOWN";});
@@ -1100,10 +1110,10 @@ class Unpacker {
     static function decodeSerializedCollectionData(b : Bytes) : Dynamic {
         var fields = scanProtobuf(b);
         var fieldType    = fields.get(1) != null ? fields.get(1).iv : 0;
-        var typeName     = fields.get(2) != null ? fields.get(2).sv : "";
+        var typeName     = bStr(fields.get(2) != null ? fields.get(2).bv : null);
         var assemblyType = fields.get(3) != null ? fields.get(3).iv : 0;
         var count        = fields.get(4) != null ? fields.get(4).iv : 0;
-        var fieldName    = fields.get(6) != null ? fields.get(6).sv : "";
+        var fieldName    = bStr(fields.get(6) != null ? fields.get(6).bv : null);
         // field 5 = itemIDs — written as repeated individual varints (one per item)
         // Use multi-scan to collect all occurrences of field 5
         var itemIDs : Array<String> = [];
@@ -1177,10 +1187,10 @@ class Unpacker {
             var fields = scanProtobuf(entryBytes);
             var entry : Dynamic = {};
             // Bone names: f1-f4
-            if (fields.get(1) != null) Reflect.setField(entry, "bone0", fields.get(1).sv);
-            if (fields.get(2) != null) Reflect.setField(entry, "bone1", fields.get(2).sv);
-            if (fields.get(3) != null) Reflect.setField(entry, "bone2", fields.get(3).sv);
-            if (fields.get(4) != null) Reflect.setField(entry, "bone3", fields.get(4).sv);
+            if (fields.get(1) != null) Reflect.setField(entry, "bone0", bStr(fields.get(1).bv));
+            if (fields.get(2) != null) Reflect.setField(entry, "bone1", bStr(fields.get(2).bv));
+            if (fields.get(3) != null) Reflect.setField(entry, "bone2", bStr(fields.get(3).bv));
+            if (fields.get(4) != null) Reflect.setField(entry, "bone3", bStr(fields.get(4).bv));
             // Weights: f5-f8 (Fixed32 — scanProtobuf stores raw bits in .iv)
             // Store both human-readable float AND exact bits for lossless round-trip
             inline function wField(fnum:Int, key:String, bitsKey:String) {
@@ -1211,8 +1221,34 @@ class Unpacker {
     }
 
     static function parseJsonMeta(b : Bytes) : Dynamic {
-        try { return haxe.Json.parse(b.getString(0, b.length)); }
-        catch (_) { var w : Dynamic = {}; Reflect.setField(w, "_raw", b.getString(0, b.length)); return w; }
+        // b.getString on a non-UTF-8 byte slice can throw on some Haxe targets
+        // (hxcpp, HashLink) and silently corrupts on others (Python). For JSON
+        // meta the content is always ASCII, but we route through a safe
+        // decoder so the tool never crashes on binary bytes that happen to
+        // end up in a JSON-meta slot.
+        var s = bStr(b);
+        try { return haxe.Json.parse(s); }
+        catch (_) { var w : Dynamic = {}; Reflect.setField(w, "_raw", s); return w; }
+    }
+
+    /** Safe ASCII-only Bytes → String.
+        Returns "" on null/empty input. We deliberately bypass Bytes.getString
+        (which validates UTF-8 and can throw on targets that validate it) by
+        iterating bytes one at a time and clamping to 0x7F. For binary protobuf
+        payloads, callers should use the raw Bytes (.bv) directly and never
+        round-trip through String. */
+    static function bStr(b : Null<Bytes>) : String {
+        if (b == null) return "";
+        var sb = new StringBuf();
+        for (i in 0...b.length) {
+            var c = b.get(i);
+            // 0x09=tab, 0x0A=LF, 0x0D=CR, 0x20..0x7E printable ASCII
+            if (c == 0x09 || c == 0x0A || c == 0x0D || (c >= 0x20 && c <= 0x7E))
+                sb.addChar(c);
+            else
+                sb.addChar(0x3F);  // '?'  — safe replacement
+        }
+        return sb.toString();
     }
 
     // ── Primitive decoder (minimal hand-rolled protobuf scanner) ─────────────
@@ -1220,10 +1256,10 @@ class Unpacker {
     static function decodePrimitive(metaBytes : Bytes, dataBytes : Null<Bytes>) : Null<Dynamic> {
         var fields = scanProtobuf(metaBytes);
         var fieldType    = fields.get(1) != null ? fields.get(1).iv  : 0;
-        var typeName     = fields.get(2) != null ? fields.get(2).sv  : "";
+        var typeName     = bStr(fields.get(2) != null ? fields.get(2).bv : null);
         var assemblyType = fields.get(3) != null ? fields.get(3).iv  : 0;
         var arrayItem    = fields.get(4) != null ? (fields.get(4).iv != 0) : false;
-        var fieldName    = fields.get(5) != null ? fields.get(5).sv  : "";
+        var fieldName    = bStr(fields.get(5) != null ? fields.get(5).bv : null);
 
         var valueRep : Dynamic = null;
         if (dataBytes != null && dataBytes.length > 0) {
@@ -1251,6 +1287,14 @@ class Unpacker {
     }
 
     static function scanProtobuf(b : Bytes) : Map<Int, PBField> {
+        // NOTE: .bv stores the RAW bytes of a length-delimited field.
+        // We deliberately avoid Bytes.getString here — it validates UTF-8
+        // and either throws (hxcpp/HashLink when bytes happen to collide
+        // with multi-byte starter sequences like 0xC2 0x18) or silently
+        // corrupts (Python substitutes U+FFFD). Callers that want a
+        // String for ASCII fields (display name, type name, bone name)
+        // should use bStr(field.bv); callers that want the raw payload
+        // bytes (submessages, binary blobs) should use field.bv directly.
         var m : Map<Int, PBField> = new Map();
         var p = 0;
         while (p < b.length) {
@@ -1258,15 +1302,15 @@ class Unpacker {
             var fn = tr.v >> 3; var wt = tr.v & 7;
             if (wt == 0) {
                 var vr = readVarint(b, p); if (vr == null) break; p = vr.next;
-                m.set(fn, { iv: vr.v, sv: Std.string(vr.v) });
+                m.set(fn, { iv: vr.v, bv: null });
             } else if (wt == 2) {
                 var lr = readVarint(b, p); if (lr == null) break; p = lr.next;
                 var len = lr.v; if (p + len > b.length) break;
-                m.set(fn, { iv: 0, sv: b.sub(p, len).getString(0, len) });
+                m.set(fn, { iv: 0, bv: b.sub(p, len) });
                 p += len;
             } else if (wt == 5) {
                 if (p + 4 > b.length) break;
-                m.set(fn, { iv: b.getInt32(p), sv: "" }); p += 4;
+                m.set(fn, { iv: b.getInt32(p), bv: null }); p += 4;
             } else if (wt == 1) {
                 if (p + 8 > b.length) break; p += 8;
             } else break;
@@ -1291,5 +1335,10 @@ class Unpacker {
 typedef NodeRec  = { resType: Int, referenceID: Int, name: String, children: Array<NodeRec> }
 typedef AssetRec = { resourceID: Int, streamed: Bool, metaDataType: Int, meta: Null<Bytes>, data: Null<Bytes> }
 typedef ResBlock = { resTypeRaw: Int, assets: Array<AssetRec> }
-typedef PBField  = { iv: Int, sv: String }
+// .iv = varint value (for wire-type 0) OR raw int32 bits (for wire-type 5)
+// .bv = raw Bytes of a length-delimited field (wire-type 2), NULL otherwise.
+// For ASCII string access use bStr(field.bv); for binary submessage access
+// use field.bv directly. DO NOT call Bytes.getString on .bv — that's the
+// original crash bug (it throws on targets that validate UTF-8).
+typedef PBField  = { iv : Int, bv : Null<Bytes> }
 typedef VR       = { v: Int, next: Int }
